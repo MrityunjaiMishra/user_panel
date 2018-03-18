@@ -1,0 +1,153 @@
+<html>
+    <head>
+       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="_css/index.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    </head>
+    <body>
+      
+        
+        <div class="container-fluid">
+            
+            <div class ="container">
+                <!--personal details form-->
+                <div class="row">
+                    <h3>Personal Details</h3>
+                    <div class="col-md-6">
+                        
+                        <input type="text" placeholder="Name" class="form-control" id="name" required>
+
+                        <input type="email" id="eml" placeholder="Email"class="form-control" required>                        
+                        <input type="tel" id="tel" placeholder="Mobile Number" class="form-control" required>
+ 
+                    </div>
+                    <div class="col-md-6">
+                        
+                        <input type="" id="aadahar" placeholder="Aadhaar Card Number" class="form-control" required>
+                        
+                        <select name="Address" class="form-control"  id="adtype" onchange="onChange()" required>
+                            <option value="" disabled selected>Address Type</option>
+                            <option value="A">Buildings/Apartments</option>
+                            <option value="B">Bungalows/Plots</option>
+                            <option value="C">Corporate properties & Organizations</option>
+                            <option value="D">Chawls/Slums</option>
+                            <option value="E">Govt Properties and Monuments</option>
+                            <option value="F">Miscellaneous</option>
+                        </select>
+                    </div>
+                </div>
+                <!--address form-->
+                
+                <!--Buildings/Apartments-->
+                <div class="row" id="building">
+                    <h3>Address Details</h3>
+                    <div class="col-md-6">
+                        <input type="" placeholder="Flat No" class="form-control" id="a_flatNo" required >
+                        <input type="text" placeholder="Building Name" class="form-control" id="a_buildingName" required>
+                        <input type="text" placeholder="Street/Lane/Road" class="form-control" id="a_streetLane" required>
+                        <input type="text" placeholder="Landmark" class="form-control" id="a_landmark" required>
+
+                    </div>
+                    <div class="col-md-6">
+                        <input type="" placeholder="Pincode" class="form-control" id="a_pin" required>
+                        <input type="text" placeholder="Village/Town/City" class="form-control" id="a_villageTown" required>
+                        <input type="text" placeholder="District" class="form-control" id="a_district" required>
+                        <input type="text" placeholder="State" class="form-control" id="a_state" required>
+                    </div>
+                </div>
+                
+                <!--Bungalows/Plots-->
+                <div class="row" id="bungalow">
+                    <h3>Address Details</h3>
+                    <div class="col-md-6">
+                        <input type="" placeholder="Bungalow/Plot No" class="form-control" id="b_bungNo"  required>
+                        <input type="text" placeholder="Bungalow/Plot Name" class="form-control" id="b_bungName" required>
+                        <input type="text" placeholder="Street/Lane/Road" class="form-control" id="b_streetLane" required>
+                        <input type="text" placeholder="Landmark" class="form-control" id="b_landmark" required>
+
+                    </div>
+                    <div class="col-md-6">
+                        <input type="" placeholder="Pincode" class="form-control" id="b_pin" required>
+                        <input type="text" placeholder="Village/Town/City" class="form-control" id="b_villageTown" required>
+                        <input type="text" placeholder="District" class="form-control" id="b_district" required>
+                        <input type="text" placeholder="State" class="form-control" id="b_state" required>
+                    </div>
+                </div>
+                <!--Corporate properties & Organizations-->
+                <div class="row" id="corporate">
+                    <h3>Address Details</h3>
+                    <div class="col-md-6">
+                        <input type="" placeholder="Commercial Space No" class="form-control" id="c_cNo" required>
+                        <input type="text" placeholder="Commercial Space Name" class="form-control" id="c_cSpace" required>
+                        <input type="text" placeholder="Street/Lane/Road" class="form-control" id="c_streetLane" required>
+                        <input type="text" placeholder="Landmark" class="form-control" id="c_landmark" required>
+
+                    </div>
+                    <div class="col-md-6">
+                        <input type="" placeholder="Pincode" class="form-control" id="c_pin" required>
+                        <input type="text" placeholder="Village/Town/City" class="form-control" id="c_villageTown" required>
+                        <input type="text" placeholder="District" class="form-control" id="c_district" required>
+                        <input type="text" placeholder="State" class="form-control" id="c_state" required>
+                    </div>
+                </div>
+                <!--Chawls/Slums-->
+                <div class="row" id="chawls">
+                    <h3>Address Details</h3>
+                    <div class="col-md-6">
+                        <input type="" placeholder="Chawl No" class="form-control" id="d_chawl_no" required>
+                        <input type="text" placeholder="Chawl Name" class="form-control" id="d_chwalName" required>
+                        <input type="text" placeholder="Street/Lane/Road" class="form-control" id="d_streetLane" required>
+                        <input type="text" placeholder="Landmark" class="form-control" id="d_landmark" required>
+
+                    </div>
+                    <div class="col-md-6">
+                        <input type="" placeholder="Pincode" class="form-control" id="d_pin" required>
+                        <input type="text" placeholder="Village/Town/City" class="form-control" id="d_villageTown" required>
+                        <input type="text" placeholder="District" class="form-control" id="d_district" required>
+                        <input type="text" placeholder="State" class="form-control" id="d_state" required>
+                    </div>
+                </div>
+                <!--Govt Properties and Monuments-->
+                <div class="row" id="govtProps">
+                    <h3>Address Details</h3>
+                    <div class="col-md-6">
+                        <input type="" placeholder="Flat No" class="form-control" id="e_flatNo" required>
+                        <input type="text" placeholder="Building Name" class="form-control" id="e_buildingName" required>
+                        <input type="text" placeholder="Street/Lane/Road" class="form-control" id="e_streetLane" required>
+                        <input type="text" placeholder="Landmark" class="form-control" id="e_landmark" required>
+
+                    </div>
+                    <div class="col-md-6">
+                        <input type="" placeholder="Pincode" class="form-control" id="e_pin" required>
+                        <input type="text" placeholder="Village/Town/City" class="form-control" id="e_villageTown" required>
+                        <input type="text" placeholder="District" class="form-control" id="e_district" required>
+                        <input type="text" placeholder="State" class="form-control" id="e_state" required>
+                    </div>
+                </div>
+                <!--Miscellaneous-->
+                <div class="row" id="miscel">
+                    <h3>Address Details</h3>
+                    <div class="col-md-6">
+                        <input type="" placeholder="Flat No" class="form-control" id="f_flatNo" required>
+                        <input type="text" placeholder="Building Name" class="form-control" id="f_buildingName" required>
+                        <input type="text" placeholder="Street/Lane/Road" class="form-control" id="f_streetLane" required>
+                        <input type="text" placeholder="Landmark" class="form-control" id="f_landmark" required>
+
+                    </div>
+                    <div class="col-md-6">
+                        <input type="" placeholder="Pincode" class="form-control" id="f_pin" required>
+                        <input type="text" placeholder="Village/Town/City" class="form-control" id="f_villageTown" required>
+                        <input type="text" placeholder="District" class="form-control" id="f_district" required>
+                        <input type="text" placeholder="State" class="form-control" id="f_state" required>
+                    </div>
+                </div>
+                <input type="submit" class="btn">
+            </div>
+        </div>
+           
+        <!--scripts-->
+        <script type="text/javascript" src="_js/index.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </body>    
+</html>
